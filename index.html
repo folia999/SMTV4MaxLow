@@ -40,69 +40,47 @@
 			players.push(new YT.Player('player1', {
 				events: {
 					'onReady': onPlayerReady
-				},
-				playerVars: {
-					'autoplay': 1,
-					'mute': 0
 				}
 			}));
 			players.push(new YT.Player('player2', {
 				events: {
 					'onReady': onPlayerReady
-				},
-				playerVars: {
-					'autoplay': 1,
-					'mute': 0
 				}
 			}));
 			players.push(new YT.Player('player3', {
 				events: {
 					'onReady': onPlayerReady
-				},
-				playerVars: {
-					'autoplay': 1,
-					'mute': 0
 				}
 			}));
 			players.push(new YT.Player('player4', {
 				events: {
 					'onReady': onPlayerReady
-				},
-				playerVars: {
-					'autoplay': 1,
-					'mute': 0
 				}
 			}));
 		}
 
 		function onPlayerReady(event) {
-			event.target.setPlaybackQuality('small');
-			event.target.setVolume(1);
-			event.target.playVideo();
+			event.target.setPlaybackQuality('small'); // Set Quality to Small
+			event.target.playVideo(); // AutoPlay
 		}
-
-		// Automatically refresh the webpage every 30 minutes
-		setInterval(function() {
-				location.reload();
-		}, 60 * 30 * 1000); // 30 minutes to milliseconds
 	</script>
 </head>
 
 <body>
 	<div class="container">
-		<div class="video"><iframe id="player1" width="848" height="478" src="https://www.youtube.com/embed/live_stream?channel=UCyYoY9S20IXXPLPrQWE5RfA"
+		<div class="video"><iframe id="player1" width="848" height="478" src="https://www.youtube.com/embed/live_stream?channel=UCyYoY9S20IXXPLPrQWE5RfA&autoplay=1"
 				title="SMTV Triple Compound Interest" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				allowfullscreen></iframe></div>
-		<div class="video"><iframe id="player2" width="848" height="478" src="https://www.youtube.com/embed/live_stream?channel=UCyYoY9S20IXXPLPrQWE5RfA"
+		<div class="video"><iframe id="player2" width="848" height="478" src="https://www.youtube.com/embed/live_stream?channel=UCyYoY9S20IXXPLPrQWE5RfA&autoplay=1"
 				title="SMTV Triple Compound Interest" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				allowfullscreen></iframe></div>
-		<div class="video"><iframe id="player3" width="848" height="478" src="https://www.youtube.com/embed/live_stream?channel=UCyYoY9S20IXXPLPrQWE5RfA"
+		<div class="video"><iframe id="player3" width="848" height="478" src="https://www.youtube.com/embed/live_stream?channel=UCyYoY9S20IXXPLPrQWE5RfA&autoplay=1"
 				title="SMTV Triple Compound Interest" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				allowfullscreen></iframe></div>
-		<div class="video"><iframe id="player4" width="848" height="478" src="https://www.youtube.com/embed/live_stream?channel=UCyYoY9S20IXXPLPrQWE5RfA"
+		<div class="video"><iframe id="player4" width="848" height="478" src="https://www.youtube.com/embed/live_stream?channel=UCyYoY9S20IXXPLPrQWE5RfA&autoplay=1"
 				title="SMTV Triple Compound Interest" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				allowfullscreen></iframe></div>
