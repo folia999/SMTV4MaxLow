@@ -40,28 +40,45 @@
 			players.push(new YT.Player('player1', {
 				events: {
 					'onReady': onPlayerReady
+				},
+				playerVars: {
+					'autoplay': 1,
+					'mute': 0
 				}
 			}));
 			players.push(new YT.Player('player2', {
 				events: {
 					'onReady': onPlayerReady
+				},
+				playerVars: {
+					'autoplay': 1,
+					'mute': 0
 				}
 			}));
 			players.push(new YT.Player('player3', {
 				events: {
 					'onReady': onPlayerReady
+				},
+				playerVars: {
+					'autoplay': 1,
+					'mute': 0
 				}
 			}));
 			players.push(new YT.Player('player4', {
 				events: {
 					'onReady': onPlayerReady
+				},
+				playerVars: {
+					'autoplay': 1,
+					'mute': 0
 				}
 			}));
 		}
 
 		function onPlayerReady(event) {
-			event.target.setPlaybackQuality('small'); // 設定解析度為最低
-			event.target.setVolume(1); // 設定音量為最低但有聲音
+			event.target.setPlaybackQuality('small');
+			event.target.setVolume(1);
+			event.target.playVideo();
 		}
 
 		// Automatically refresh the webpage every 30 minutes
@@ -73,19 +90,19 @@
 
 <body>
 	<div class="container">
-		<div class="video"><iframe id="player1" width="848" height="478" src="https://www.youtube.com/embed/live_stream?channel=UCyYoY9S20IXXPLPrQWE5RfA&autoplay=1"
+		<div class="video"><iframe id="player1" width="848" height="478" src="https://www.youtube.com/embed/live_stream?channel=UCyYoY9S20IXXPLPrQWE5RfA"
 				title="SMTV Triple Compound Interest" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				allowfullscreen></iframe></div>
-		<div class="video"><iframe id="player2" width="848" height="478" src="https://www.youtube.com/embed/live_stream?channel=UCyYoY9S20IXXPLPrQWE5RfA&autoplay=1"
+		<div class="video"><iframe id="player2" width="848" height="478" src="https://www.youtube.com/embed/live_stream?channel=UCyYoY9S20IXXPLPrQWE5RfA"
 				title="SMTV Triple Compound Interest" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				allowfullscreen></iframe></div>
-		<div class="video"><iframe id="player3" width="848" height="478" src="https://www.youtube.com/embed/live_stream?channel=UCyYoY9S20IXXPLPrQWE5RfA&autoplay=1"
+		<div class="video"><iframe id="player3" width="848" height="478" src="https://www.youtube.com/embed/live_stream?channel=UCyYoY9S20IXXPLPrQWE5RfA"
 				title="SMTV Triple Compound Interest" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				allowfullscreen></iframe></div>
-		<div class="video"><iframe id="player4" width="848" height="478" src="https://www.youtube.com/embed/live_stream?channel=UCyYoY9S20IXXPLPrQWE5RfA&autoplay=1"
+		<div class="video"><iframe id="player4" width="848" height="478" src="https://www.youtube.com/embed/live_stream?channel=UCyYoY9S20IXXPLPrQWE5RfA"
 				title="SMTV Triple Compound Interest" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				allowfullscreen></iframe></div>
